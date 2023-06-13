@@ -2,7 +2,7 @@
 import style from '../../styles/Login.module.css'
 import Image from 'next/image'
 import { useState } from 'react';
-import { HiAtSymbol, HiLockClosed, HiEyeOff, HiEye} from "react-icons/hi";
+import { HiAtSymbol, HiLockClosed, HiEyeOff, HiEye,HiOutlineLogout} from "react-icons/hi";
 import { signIn, signOut } from "next-auth/react";
 import Layout from './layout';
 import Head from 'next/head';
