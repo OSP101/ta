@@ -38,18 +38,27 @@ export default function Contentsub() {
               onChange={(e) => handlePageChange(e.target.value)}
             >
               <option value="Checkname">Checkname</option>
+              <option value="Score">Score</option>
               <option value="Person">Person</option>
               <option value="Setting">Setting</option>
             </select>
           </div>
           <ul className="hidden sm:flex flex-row pt-8">
-            <li
+          <li
               className={`rounded-t w-32 h-12 flex items-center justify-center ${
                 currentPage === 'Checkname' ? 'bg-white' : 'bg-gray-300'
-              } text-sm text-gray-800`}
+              } mr-1 text-sm text-gray-800`}
               onClick={() => handlePageChange('Checkname')}
             >
               Checkname
+            </li>
+            <li
+              className={`rounded-t w-32 h-12 flex items-center justify-center ${
+                currentPage === 'Score' ? 'bg-white' : 'bg-gray-300'
+              } text-sm text-gray-800`}
+              onClick={() => handlePageChange('Score')}
+            >
+              Score
             </li>
             <li
               className={`rounded-t w-32 h-12 flex items-center justify-center ${
@@ -76,7 +85,75 @@ export default function Contentsub() {
         {currentPage === 'Checkname' && (
           <div className="w-full h-full rounded border-dashed border-2 border-gray-300">
             {/* Checkname Content */}
-            <h1>Checkname Page</h1>
+
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 ">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Product name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Color
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Category
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Price
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b ">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                    Apple MacBook Pro 17"
+                </th>
+                <td class="px-6 py-4">
+                    Silver
+                </td>
+                <td class="px-6 py-4">
+                    Laptop
+                </td>
+                <td class="px-6 py-4">
+                    $2999
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+            </tr>
+            <tr class="border-b bg-gray-50 ">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                    Microsoft Surface Pro
+                </th>
+                <td class="px-6 py-4">
+                    White
+                </td>
+                <td class="px-6 py-4">
+                    Laptop PC
+                </td>
+                <td class="px-6 py-4">
+                    $1999
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+            </tr>
+           
+        </tbody>
+    </table>
+</div>
+
+          </div>
+        )}
+
+      {currentPage === 'Score' && (
+          <div className="w-full h-full rounded border-dashed border-2 border-gray-300">
+            {/* Score Content */}
+            <h1>Score Page</h1>
           </div>
         )}
 

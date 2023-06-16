@@ -4,8 +4,9 @@ import { HiDotsVertical, HiCog, HiTrash } from 'react-icons/hi';
 import Link from 'next/link';
 
 const CourseCard = ({ course }) => {
+  const data = course
   return (
-    <Link href={course.link} className="bg-white rounded-lg shadow-lg w-18.75rem h-18.375rem relative">
+    <Link href={`/s/${course.code}`} className="bg-white rounded-lg shadow-lg w-18.75rem h-18.375rem relative">
             <div className="relative h-40">
         <img
           src={course.image}
